@@ -1,0 +1,65 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+local Window = OrionLib:MakeWindow({Name = "TUTORIAL", HidePremium = false, IntroText = "Tutorial", SaveConfig = true, ConfigFolder = "OrionConfigs"})", SaveConfig = true, ConfigFolder = "Utoria."})
+
+OrionLib:MakeNotification({
+	Name = "Tutorial",
+	Content = "XnYamete",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local TutTab = Window:MakeTab({
+
+      
+	Name = "Yamete",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Tutorail Section"
+})
+  
+TutTab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("Xfgaah")
+  	end    
+})
+
+  TutTab:AddToggle({
+	Name = "This is a toggle!",
+	Default = false,
+	Callback = function(Value)
+		print("Value")
+	end    
+})
+
+  TutTab:AddColorpicker({
+	Name = "Colorpicker",
+	Default = Color3.fromRGB(255, 0, 0),
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+
+  TutTab:AddSlider({
+	Name = "Slider",
+	Min = 0,
+	Max = 20,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "bananas",
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+
+  
+
+
+  
+end
+OrionLib:Init()
